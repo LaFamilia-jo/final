@@ -1,0 +1,1 @@
+/var/www/magento/lib/web/mage/redirect-url.js

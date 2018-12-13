@@ -1,0 +1,8 @@
+{
+    "readiness_checks": {
+        "error": "<br/>Found non-writable path(s):<br/>/var/www/magento/.github<br/>/var/www/magento/auth.json.sample<br/>/var/www/magento/pub/media/.htaccess<br/>/var/www/magento/pub/media/customer/.htaccess<br/>/var/www/magento/pub/media/downloadable/.htaccess<br/>/var/www/magento/pub/media/import<br/>/var/www/magento/pub/media/theme_customization/.htaccess",
+        "file_permissions_verified": false
+    },
+    "last_timestamp": 1544683091,
+    "current_timestamp": 1544683147
+}

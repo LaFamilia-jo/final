@@ -1,0 +1,13 @@
+server {
+	listen 80 default_server;
+
+	server_name _;
+#	root /var/www/html/magento;
+
+	set $MAGE_ROOT /var/www/html/magento;
+        include /etc/nginx/sites-available/magento-nginx.conf;
+
+        access_log /var/log/nginx/www-access.log;
+        error_log  /var/log/nginx/www-error.log notice;
+
+}

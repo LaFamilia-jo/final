@@ -1,1 +1,1 @@
-/var/www/magento/lib/web/mage/translate.js
+/var/www/vhosts/www.kamil123.com/webroot/lib/web/mage/translate.js

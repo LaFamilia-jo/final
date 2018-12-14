@@ -4566,7 +4566,7 @@ body._has-modal-custom .modal-custom-overlay {
  * permissions and limitations under the License.
  */
 /**
-* Amazon payment variables
+* Amazon Pay variables
 **/
 .amazon-button-container {
   display: table;
@@ -4583,8 +4583,8 @@ body._has-modal-custom .modal-custom-overlay {
 .amazon-button-container .field-tooltip {
   display: none;
   margin: -12px 0 0;
-  top: 50%;
   right: 5px;
+  top: 50%;
 }
 .checkout-shipping-address .amazon-button-container {
   margin: 22px 0;
@@ -4630,19 +4630,23 @@ body._has-modal-custom .modal-custom-overlay {
  * permissions and limitations under the License.
  */
 /** mini cart styling **/
+.product-social-links,
 .amazon-minicart-container {
   width: 100%;
   display: block;
   text-align: center;
 }
+.product-social-links .amazon-button-container,
 .amazon-minicart-container .amazon-button-container {
   display: inline-block;
   margin: 12px 0 4px 0;
 }
+.product-social-links .field-tooltip .field-tooltip-content,
 .amazon-minicart-container .field-tooltip .field-tooltip-content {
   top: 38px;
   left: -245px;
 }
+.product-social-links .field-tooltip .field-tooltip-content:before,
 .amazon-minicart-container .field-tooltip .field-tooltip-content:before {
   border: none;
   border-left: 10px solid transparent;
@@ -4651,6 +4655,7 @@ body._has-modal-custom .modal-custom-overlay {
   top: -10px;
   left: 244px;
 }
+.product-social-links .field-tooltip .field-tooltip-content:after,
 .amazon-minicart-container .field-tooltip .field-tooltip-content:after {
   border: none;
   border-left: 10px solid transparent;
@@ -4769,6 +4774,38 @@ body._has-modal-custom .modal-custom-overlay {
 .multi-checkout-fields .field.checkbox label {
   display: inline-block;
   margin: 0 0 0 12px;
+}
+.collection-point-country,
+.collection-point-postalcode,
+.collection-point-button {
+  display: inline-block;
+  padding: 20px 10px 0 0;
+}
+.collection-point-list {
+  border: 1px solid #c2c2c2;
+  max-height: 200px;
+  overflow: auto;
+}
+.collection-point-postalcode {
+  max-width: 9em;
+  vertical-align: top;
+}
+.field-error {
+  color: #e02b27;
+  font-size: 1.2rem;
+  margin-top: 7px;
+}
+table.collection-point-opening-hours > tbody > tr > td {
+  padding-bottom: 2px;
+}
+.collection-point-message {
+  padding-top: 10px;
+}
+.box-order-shipping-address .box-subtitle {
+  font-weight: 600;
+}
+.box-order-shipping-address .order-shipping-secondary-address {
+  margin-top: 1rem;
 }
 .payment-method-braintree .hosted-control {
   background: #ffffff;

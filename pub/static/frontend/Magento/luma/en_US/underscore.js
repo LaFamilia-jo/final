@@ -1,1 +1,1 @@
-/var/www/magento/lib/web/underscore.js
+/var/www/vhosts/www.kamil123.com/webroot/lib/web/underscore.js

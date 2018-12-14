@@ -1,1 +1,1 @@
-/var/www/magento/lib/web/requirejs/require.js
+/var/www/vhosts/www.kamil123.com/webroot/lib/web/requirejs/require.js

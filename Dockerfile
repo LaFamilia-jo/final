@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install -y vim software-properties-common python-s
 #    && cp -arpv  /var/www/html/magento \
     && cd /var/www/html/magento \
 #    && git clone https://github.com/ktpl-kamil/test.git .
+    ARG CACHEBUST=1 
     && git clone https://github.com/ktpl-kamil/final.git .
 
 WORKDIR /var/www/html/magento
@@ -43,15 +44,18 @@ ADD files/magento-nginx.conf /etc/nginx/sites-available/magento-nginx.conf
 
 
 
-RUN chown -R magento:magento /var/www/html/magento \
+#RUN chown -R magento:magento /var/www/html/magento \
 #    && su magento #&& composer install \
-    && su magento \
-    && bin/magento setup:upgrade && bin/magento deploy:mode:set production
+#    && su magento \
+#RUN php bin/magento setup:upgrade && bin/magento deploy:mode:set production
 
 RUN mkdir /run/php
 
 EXPOSE 22
 EXPOSE 9000
 EXPOSE 80
+RUN ["chmod", "+x", "/docker-entrypoint.sh"]
 ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["bash"]
+
 

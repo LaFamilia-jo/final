@@ -3,7 +3,10 @@ FROM ubuntu:16.04
 MAINTAINER Tonu V
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV BRANCH
+ARG BRANCH
+ENV BRANCH=$BRANCH
+
+
 
 RUN apt-get update && apt-get install -y vim software-properties-common python-software-properties apt-transport-https curl zip language-pack-en-base net-tools nginx git \
     && apt-get update \

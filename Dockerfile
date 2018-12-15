@@ -32,11 +32,9 @@ ADD files/php-fpm.ini /etc/php/7.0/fpm/php.ini
 ADD files/default /etc/nginx/sites-available/default
 ADD files/magento-nginx.conf /etc/nginx/sites-available/magento-nginx.conf
 
-
-ARG CACHEBUST=1
 RUN cd /var/www/html/magento/ \
     && ls -lhtra \
-    && git clone -b development https://github.com/ktpl-kamil/final.git . \
+    && git clone -b $BRANCH https://github.com/ktpl-kamil/final.git . \
     && chown -R magento:magento /var/www/html/magento \
 #    && su magento #&& composer install \
     && su magento \

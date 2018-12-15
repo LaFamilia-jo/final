@@ -10,7 +10,7 @@ RUN echo $BRANCH
 
 
 
-#RUN apt-get update && apt-get install -y vim software-properties-common python-software-properties apt-transport-https curl zip language-pack-en-base net-tools nginx git \
+RUN apt-get update && apt-get install -y git
 #    && apt-get update \
 #    && locale-gen en_US.UTF-8 \
 #    && export LANG=en_US.UTF-8 \

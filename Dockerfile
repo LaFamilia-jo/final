@@ -38,9 +38,7 @@ RUN echo $BRANCH
 #ADD files/default /etc/nginx/sites-available/default
 #ADD files/magento-nginx.conf /etc/nginx/sites-available/magento-nginx.conf
 
-#RUN cd /var/www/html/magento/ \
-   # && ls -lhtra \
- #   && git clone -b $BRANCH https://github.com/ktpl-kamil/final.git . \
+RUN  git clone -b $BRANCH https://github.com/ktpl-kamil/final.git . 
  #   && chown -R magento:magento /var/www/html/magento \
 #    && su magento #&& composer install \
   #  && su magento \

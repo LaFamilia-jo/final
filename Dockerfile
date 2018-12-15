@@ -4,7 +4,9 @@ MAINTAINER Tonu V
 
 ENV DEBIAN_FRONTEND=noninteractive
 ARG BRANCH
-ENV BRANCH=$BRANCH
+ENV BRANCH=development
+
+RUN echo $BRANCH
 
 
 

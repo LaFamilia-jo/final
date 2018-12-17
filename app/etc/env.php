@@ -13,8 +13,8 @@ return [
     'table_prefix' => '',
     'connection' => [
       'default' => [
-        'host' => '10.16.16.92',
-        'dbname' => 'magento2',
+        'host' => '180.211.112.84',
+        'dbname' => 'test',
         'username' => 'admin',
         'password' => 'admin',
         'active' => '1'

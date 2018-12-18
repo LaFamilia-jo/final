@@ -4,4 +4,4 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: kamil71/kamil-magento:latest
+      tag: kamil-magento:${CICD_EXECUTION_SEQUENCE}

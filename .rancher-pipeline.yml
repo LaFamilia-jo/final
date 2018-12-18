@@ -4,5 +4,6 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: kamil71/kamil-magento:latest
+      tag: lafamiliajo/final:latest
+      pushRemote: true
       registry: index.docker.io

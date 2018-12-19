@@ -51,6 +51,7 @@ RUN cd /var/www/html/magento/ \
     && chmod +x /dociker-entrypoint.sh 
 
 RUN echo $host \
+    && echo "123" \
     && chown -R magento:magento /var/www/html/magento/var/*
 
 #WORKDIR /var/www/html/magento

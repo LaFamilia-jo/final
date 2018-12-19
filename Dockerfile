@@ -35,7 +35,6 @@ ADD files/php-fpm.ini /etc/php/7.0/fpm/php.ini
 ADD files/default /etc/nginx/sites-available/default
 ADD files/magento-nginx.conf /etc/nginx/sites-available/magento-nginx.conf
 
-ARG CACHEBUST=1
 RUN cd /var/www/html/magento/ \
     && ls -lhtra \
     && git clone https://github.com/ktpl-kamil/final.git . \

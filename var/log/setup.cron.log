@@ -1,0 +1,112 @@
+Connection to Redis redis:6379 failed after 2 failures.Last Error : (113) No route to host
+setup-cron: Please check var/log/update.log for execution summary.
+Composer file not found#0 /var/www/magento/vendor/magento/framework/Composer/ComposerFactory.php(47): Magento\Framework\Composer\ComposerJsonFinder->findComposerJson()
+#1 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(362): Magento\Framework\Composer\ComposerFactory->create()
+#2 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(375): Magento\Framework\Composer\ComposerInformation->getComposer()
+#3 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(242): Magento\Framework\Composer\ComposerInformation->getLocker()
+#4 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(104): Magento\Framework\Composer\ComposerInformation->getSystemPackages()
+#5 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(65): Magento\Framework\App\ProductMetadata->getSystemPackageVersion()
+#6 /var/www/magento/vendor/magento/framework/Console/Cli.php(91): Magento\Framework\App\ProductMetadata->getVersion()
+#7 /var/www/magento/bin/magento(22): Magento\Framework\Console\Cli->__construct('Magento CLI')
+#8 {main}
+
+Composer file not found#0 /var/www/magento/vendor/magento/framework/Composer/ComposerFactory.php(47): Magento\Framework\Composer\ComposerJsonFinder->findComposerJson()
+#1 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(362): Magento\Framework\Composer\ComposerFactory->create()
+#2 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(375): Magento\Framework\Composer\ComposerInformation->getComposer()
+#3 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(242): Magento\Framework\Composer\ComposerInformation->getLocker()
+#4 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(104): Magento\Framework\Composer\ComposerInformation->getSystemPackages()
+#5 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(65): Magento\Framework\App\ProductMetadata->getSystemPackageVersion()
+#6 /var/www/magento/vendor/magento/framework/Console/Cli.php(91): Magento\Framework\App\ProductMetadata->getVersion()
+#7 /var/www/magento/bin/magento(22): Magento\Framework\Console\Cli->__construct('Magento CLI')
+#8 {main}
+
+Composer file not found#0 /var/www/magento/vendor/magento/framework/Composer/ComposerFactory.php(47): Magento\Framework\Composer\ComposerJsonFinder->findComposerJson()
+#1 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(362): Magento\Framework\Composer\ComposerFactory->create()
+#2 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(375): Magento\Framework\Composer\ComposerInformation->getComposer()
+#3 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(242): Magento\Framework\Composer\ComposerInformation->getLocker()
+#4 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(104): Magento\Framework\Composer\ComposerInformation->getSystemPackages()
+#5 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(65): Magento\Framework\App\ProductMetadata->getSystemPackageVersion()
+#6 /var/www/magento/vendor/magento/framework/Console/Cli.php(91): Magento\Framework\App\ProductMetadata->getVersion()
+#7 /var/www/magento/bin/magento(22): Magento\Framework\Console\Cli->__construct('Magento CLI')
+#8 {main}
+
+Composer file not found#0 /var/www/magento/vendor/magento/framework/Composer/ComposerFactory.php(47): Magento\Framework\Composer\ComposerJsonFinder->findComposerJson()
+#1 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(362): Magento\Framework\Composer\ComposerFactory->create()
+#2 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(375): Magento\Framework\Composer\ComposerInformation->getComposer()
+#3 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(242): Magento\Framework\Composer\ComposerInformation->getLocker()
+#4 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(104): Magento\Framework\Composer\ComposerInformation->getSystemPackages()
+#5 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(65): Magento\Framework\App\ProductMetadata->getSystemPackageVersion()
+#6 /var/www/magento/vendor/magento/framework/Console/Cli.php(91): Magento\Framework\App\ProductMetadata->getVersion()
+#7 /var/www/magento/bin/magento(22): Magento\Framework\Console\Cli->__construct('Magento CLI')
+#8 {main}
+
+Composer file not found#0 /var/www/magento/vendor/magento/framework/Composer/ComposerFactory.php(47): Magento\Framework\Composer\ComposerJsonFinder->findComposerJson()
+#1 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(362): Magento\Framework\Composer\ComposerFactory->create()
+#2 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(375): Magento\Framework\Composer\ComposerInformation->getComposer()
+#3 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(242): Magento\Framework\Composer\ComposerInformation->getLocker()
+#4 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(104): Magento\Framework\Composer\ComposerInformation->getSystemPackages()
+#5 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(65): Magento\Framework\App\ProductMetadata->getSystemPackageVersion()
+#6 /var/www/magento/vendor/magento/framework/Console/Cli.php(91): Magento\Framework\App\ProductMetadata->getVersion()
+#7 /var/www/magento/bin/magento(22): Magento\Framework\Console\Cli->__construct('Magento CLI')
+#8 {main}
+
+Composer file not found#0 /var/www/magento/vendor/magento/framework/Composer/ComposerFactory.php(47): Magento\Framework\Composer\ComposerJsonFinder->findComposerJson()
+#1 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(362): Magento\Framework\Composer\ComposerFactory->create()
+#2 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(375): Magento\Framework\Composer\ComposerInformation->getComposer()
+#3 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(242): Magento\Framework\Composer\ComposerInformation->getLocker()
+#4 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(104): Magento\Framework\Composer\ComposerInformation->getSystemPackages()
+#5 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(65): Magento\Framework\App\ProductMetadata->getSystemPackageVersion()
+#6 /var/www/magento/vendor/magento/framework/Console/Cli.php(91): Magento\Framework\App\ProductMetadata->getVersion()
+#7 /var/www/magento/bin/magento(22): Magento\Framework\Console\Cli->__construct('Magento CLI')
+#8 {main}
+
+Composer file not found#0 /var/www/magento/vendor/magento/framework/Composer/ComposerFactory.php(47): Magento\Framework\Composer\ComposerJsonFinder->findComposerJson()
+#1 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(362): Magento\Framework\Composer\ComposerFactory->create()
+#2 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(375): Magento\Framework\Composer\ComposerInformation->getComposer()
+#3 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(242): Magento\Framework\Composer\ComposerInformation->getLocker()
+#4 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(104): Magento\Framework\Composer\ComposerInformation->getSystemPackages()
+#5 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(65): Magento\Framework\App\ProductMetadata->getSystemPackageVersion()
+#6 /var/www/magento/vendor/magento/framework/Console/Cli.php(91): Magento\Framework\App\ProductMetadata->getVersion()
+#7 /var/www/magento/bin/magento(22): Magento\Framework\Console\Cli->__construct('Magento CLI')
+#8 {main}
+
+Composer file not found#0 /var/www/magento/vendor/magento/framework/Composer/ComposerFactory.php(47): Magento\Framework\Composer\ComposerJsonFinder->findComposerJson()
+#1 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(362): Magento\Framework\Composer\ComposerFactory->create()
+#2 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(375): Magento\Framework\Composer\ComposerInformation->getComposer()
+#3 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(242): Magento\Framework\Composer\ComposerInformation->getLocker()
+#4 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(104): Magento\Framework\Composer\ComposerInformation->getSystemPackages()
+#5 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(65): Magento\Framework\App\ProductMetadata->getSystemPackageVersion()
+#6 /var/www/magento/vendor/magento/framework/Console/Cli.php(91): Magento\Framework\App\ProductMetadata->getVersion()
+#7 /var/www/magento/bin/magento(22): Magento\Framework\Console\Cli->__construct('Magento CLI')
+#8 {main}
+
+Composer file not found#0 /var/www/magento/vendor/magento/framework/Composer/ComposerFactory.php(47): Magento\Framework\Composer\ComposerJsonFinder->findComposerJson()
+#1 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(362): Magento\Framework\Composer\ComposerFactory->create()
+#2 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(375): Magento\Framework\Composer\ComposerInformation->getComposer()
+#3 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(242): Magento\Framework\Composer\ComposerInformation->getLocker()
+#4 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(104): Magento\Framework\Composer\ComposerInformation->getSystemPackages()
+#5 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(65): Magento\Framework\App\ProductMetadata->getSystemPackageVersion()
+#6 /var/www/magento/vendor/magento/framework/Console/Cli.php(91): Magento\Framework\App\ProductMetadata->getVersion()
+#7 /var/www/magento/bin/magento(22): Magento\Framework\Console\Cli->__construct('Magento CLI')
+#8 {main}
+
+Composer file not found#0 /var/www/magento/vendor/magento/framework/Composer/ComposerFactory.php(47): Magento\Framework\Composer\ComposerJsonFinder->findComposerJson()
+#1 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(362): Magento\Framework\Composer\ComposerFactory->create()
+#2 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(375): Magento\Framework\Composer\ComposerInformation->getComposer()
+#3 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(242): Magento\Framework\Composer\ComposerInformation->getLocker()
+#4 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(104): Magento\Framework\Composer\ComposerInformation->getSystemPackages()
+#5 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(65): Magento\Framework\App\ProductMetadata->getSystemPackageVersion()
+#6 /var/www/magento/vendor/magento/framework/Console/Cli.php(91): Magento\Framework\App\ProductMetadata->getVersion()
+#7 /var/www/magento/bin/magento(22): Magento\Framework\Console\Cli->__construct('Magento CLI')
+#8 {main}
+
+Composer file not found#0 /var/www/magento/vendor/magento/framework/Composer/ComposerFactory.php(47): Magento\Framework\Composer\ComposerJsonFinder->findComposerJson()
+#1 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(362): Magento\Framework\Composer\ComposerFactory->create()
+#2 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(375): Magento\Framework\Composer\ComposerInformation->getComposer()
+#3 /var/www/magento/vendor/magento/framework/Composer/ComposerInformation.php(242): Magento\Framework\Composer\ComposerInformation->getLocker()
+#4 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(104): Magento\Framework\Composer\ComposerInformation->getSystemPackages()
+#5 /var/www/magento/vendor/magento/framework/App/ProductMetadata.php(65): Magento\Framework\App\ProductMetadata->getSystemPackageVersion()
+#6 /var/www/magento/vendor/magento/framework/Console/Cli.php(91): Magento\Framework\App\ProductMetadata->getVersion()
+#7 /var/www/magento/bin/magento(22): Magento\Framework\Console\Cli->__construct('Magento CLI')
+#8 {main}
+

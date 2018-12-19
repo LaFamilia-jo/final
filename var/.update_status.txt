@@ -1,0 +1,2 @@
+[2018-12-12 11:26:21 UTC] Update is already in progress.
+[2018-12-13 06:28:05 UTC] Magento is not installed.

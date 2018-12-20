@@ -7,3 +7,7 @@ stages:
       tag: lafamiliajo/final:${CICD_GIT_TAG}
       pushRemote: true
       registry: index.docker.io
+  when:
+    event:
+      include:
+      - tag

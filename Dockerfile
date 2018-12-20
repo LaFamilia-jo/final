@@ -4,6 +4,8 @@ MAINTAINER Tonu V
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV host=10.16.16.92
+
+ARG max
 RUN echo "$max"
 RUN apt-get update \
     && apt-get install -y vim software-properties-common python-software-properties apt-transport-https curl zip language-pack-en-base net-tools nginx git --no-install-recommends \

@@ -1,0 +1,112 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cattle.io/timestamp: 2018-12-20T13:21:46Z
+    cni.projectcalico.org/podIP: 10.42.10.29/32
+    field.cattle.io/ports: '[[{"containerPort":80,"dnsName":"web","kind":"ClusterIP","name":"80tcp02","protocol":"TCP","sourcePort":0}]]'
+  creationTimestamp: 2018-12-20T13:21:48Z
+  generateName: web-76b568cf8b-
+  labels:
+    pod-template-hash: "3261247946"
+    workload.user.cattle.io/workloadselector: deployment-p-66nfk-pipeline-web
+    workloadID_ingress-42275434e1f66e77ad40f937a1304a59: "true"
+  name: web-76b568cf8b-j2zrr
+  namespace: p-66nfk-pipeline
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: web-76b568cf8b
+    uid: 34771176-045a-11e9-ae1e-02c00a7b901c
+  resourceVersion: "1274872"
+  selfLink: /api/v1/namespaces/p-66nfk-pipeline/pods/web-76b568cf8b-j2zrr
+  uid: 34791bf8-045a-11e9-ae1e-02c00a7b901c
+spec:
+  containers:
+  - envFrom:
+    - configMapRef:
+        name: magento-config-map
+        optional: false
+    image: lafamiliajo/${CICD_IMAGE}:${CICD_GIT_TAG}
+    imagePullPolicy: Always
+    name: web
+    ports:
+    - containerPort: 80
+      name: 80tcp02
+      protocol: TCP
+    resources: {}
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities: {}
+      privileged: false
+      readOnlyRootFilesystem: false
+      runAsNonRoot: false
+    stdin: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    tty: true
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: default-token-82xkx
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  imagePullSecrets:
+  - name: dh-lafamilia-jo
+  nodeName: ip-172-31-30-211.eu-central-1.compute.internal
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: default-token-82xkx
+    secret:
+      defaultMode: 420
+      secretName: default-token-82xkx
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: 2018-12-20T13:21:48Z
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: 2018-12-20T13:22:37Z
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: null
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: 2018-12-20T13:21:48Z
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://eae52b616b224e031958fd3f2688257ef4a7cbdd4c99507fb623962c9e1e1022
+    image: lafamiliajo/final:5
+    imageID: docker-pullable://lafamiliajo/final@sha256:bf8a4fa6bf79cf452e834acdef5777ec403b3f5885d6dd2dab97cb3f048ebf7a
+    lastState: {}
+    name: web
+    ready: true
+    restartCount: 0
+    state:
+      running:
+        startedAt: 2018-12-20T13:22:37Z
+  hostIP: 172.31.30.211
+  phase: Running
+  podIP: 10.42.10.29
+  qosClass: BestEffort
+  startTime: 2018-12-20T13:21:48Z

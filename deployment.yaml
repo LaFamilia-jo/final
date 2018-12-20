@@ -38,7 +38,7 @@ spec:
         - configMapRef:
             name: magento-config-map
             optional: false
-        image: lafamiliajo/final:5
+        image: ${CICD_IMAGE}:${CICD_GIT_TAG}
         imagePullPolicy: Always
         name: web
         ports:

@@ -8,6 +8,4 @@ stages:
       pushRemote: true
       registry: index.docker.io
   when:
-    event:
-      include:
-      - tag
+    event: {}

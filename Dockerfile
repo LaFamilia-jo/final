@@ -7,6 +7,7 @@ ENV host=10.16.16.92
 ENV FPM_PM=$FPM
 ENV FPM_PM_MAX_CHILDREN=1000
 ENV FPM_PM_START_SERVICE=20
+ARG FPM=dynamic
 RUN echo $max
 RUN echo $FPM.pm.start_servers
 RUN echo $FPM.pm.max_children

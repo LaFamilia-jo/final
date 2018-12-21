@@ -4,9 +4,9 @@ MAINTAINER Tonu V
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV host=10.16.16.92
-ENV FPM.pm=dynamic
-ENV FPM.pm.max_children=1000
-ENV FPM.pm.start_servers=20
+ENV FPM_PM=$FPM
+ENV FPM_PM_MAX_CHILDREN=1000
+ENV FPM_PM_START_SERVICE=20
 RUN echo $max
 RUN echo $FPM.pm.start_servers
 RUN echo $FPM.pm.max_children

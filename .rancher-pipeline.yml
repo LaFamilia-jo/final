@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: lafamiliajo/final:${CICD_GIT_TAG}
+      tag: lafamiliajo/final:${CICD_GIT_COMMIT}
       pushRemote: true
       registry: index.docker.io
   when:

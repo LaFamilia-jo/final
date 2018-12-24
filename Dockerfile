@@ -51,7 +51,7 @@ RUN sh /tmp/install-php7.2-mcrypt.sh \
     && chmod +x /dociker-entrypoint.sh 
 
 RUN echo $host \
-    && echo "121" 
+    && echo "121" \
     && chown -R magento:magento /var/www/html/magento/var
 
 COPY rootfs /

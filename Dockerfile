@@ -22,11 +22,11 @@ RUN apt-get update \
 
 RUN sed -i -e '/pam_loginuid.so/ s/^#*/#/' /etc/pam.d/cron
 
-ADD files/php-cli.ini /etc/php/7.0/cli/php.ini
+ADD files/php-cli.ini /etc/php/7.2/cli/php.ini
 ADD files/docker-entrypoint.sh  /docker-entrypoint.sh
-ADD files/php-fpm.conf /etc/php/7.0/fpm/php-fpm.conf
-ADD files/www.conf /etc/php/7.0/fpm/pool.d/www.conf
-ADD files/php-fpm.ini /etc/php/7.0/fpm/php.ini
+ADD files/php-fpm.conf /etc/php/7.2/fpm/php-fpm.conf
+ADD files/www.conf /etc/php/7.2/fpm/pool.d/www.conf
+ADD files/php-fpm.ini /etc/php/7.2/fpm/php.ini
 ADD files/default /etc/nginx/sites-available/default
 ADD files/magento-nginx.conf /etc/nginx/sites-available/magento-nginx.conf
 ADD files/install-php7.2-mcrypt.sh /tmp/install-php7.2-mcrypt.sh 
@@ -62,7 +62,7 @@ ENV ALLOW_EMPTY_PASSWORD="no" \
 #    MAGENTO_DATABASE_USER="bn_magento" \
     MAGENTO_EMAIL="user@example.com" \
     MAGENTO_FIRSTNAME="FirstName" \
-    MAGENTO_HOST="127.0.0.1" \
+    MAGENTO_HOST="127.2.0.1" \
     MAGENTO_LASTNAME="LastName" \
     MAGENTO_MODE="developer" \
     MAGENTO_PASSWORD="bitnami1" \

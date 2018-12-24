@@ -17,7 +17,11 @@ RUN apt-get update \
     && echo "deb https://packages.sury.org/php/ stretch main" | sudo tee /etc/apt/sources.list.d/php.list \
     && apt-get update \
 
-    && apt-get install -y php7.2 php7.2-fpm php7.2-cli php7.2-common php7.2-gd php7.2-mysql php7.2-curl php7.2-intl php7.2-xsl php7.2-mbstring php7.2-zip php7.2-bcmath php7.2-iconv php7.2-soap
+    && apt-get install -y php7.2 php7.2-fpm php7.2-cli php7.2-common php7.2-gd php7.2-mysql php7.2-curl php7.2-intl php7.2-xsl php7.2-mbstring php7.2-zip php7.2-bcmath php7.2-iconv php7.2-soap \
+    && curl -sS https://getcomposer.org/installer | php -- \
+    --install-dir=/usr/bin \
+    --filename=composer 
+
 #RUN bitnami-pkg unpack libphp-7.1.25-21 --checksum c55887490c4242caaf4a7a9abefefaff71b5413cec6965b1e08a2795e4aff167
 
 RUN sed -i -e '/pam_loginuid.so/ s/^#*/#/' /etc/pam.d/cron

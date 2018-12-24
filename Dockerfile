@@ -81,7 +81,5 @@ ENV ALLOW_EMPTY_PASSWORD="no" \
 
 EXPOSE 80 443
 
-#ENTRYPOINT [ "/app-entrypoint.sh" ]
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["bash"]
-#CMD [ "httpd", "-f", "/bitnami/apache/conf/httpd.conf", "-DFOREGROUND" ]

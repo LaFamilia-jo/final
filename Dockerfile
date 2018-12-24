@@ -38,7 +38,7 @@ ADD files/install-php7.2-mcrypt.sh /tmp/install-php7.2-mcrypt.sh
 RUN sh /tmp/install-php7.2-mcrypt.sh \
     && cd /var/www/html/magento/ \
     && ls -lhtra \
-    && git clone https://github.com/ktpl-kamil/magento2.3.git . \
+    && git clone -b bitnami https://github.com/ktpl-kamil/magento2.3.git . \
     && chown -R magento:magento /var/www/html/magento \
 #    && su magento && composer install \
     && su magento \

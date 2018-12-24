@@ -9,8 +9,8 @@
 # 
 php -v # if default php is not 7.2 then use /usr/bin/php7.2 instead php
 pecl version
-sudo apt-get install php-pear
-sudo apt-get install php7.2-dev
+sudo apt-get install php-pear -y
+sudo apt-get install php7.2-dev -y
 
 # 
 # Install mcrypt extension

@@ -36,7 +36,7 @@ RUN sh /tmp/install-php7.2-mcrypt.sh \
     && ls -lhtra \
     && git clone https://github.com/ktpl-kamil/magento2.3.git . \
     && chown -R magento:magento /var/www/html/magento \
-    && su magento #&& composer install \
+    && su magento && composer install \
     && su magento \
     && php bin/magento setup:upgrade && bin/magento deploy:mode:set production && exit \
     && chown -R magento:magento /var/www/html/magento \
@@ -48,7 +48,7 @@ RUN sh /tmp/install-php7.2-mcrypt.sh \
 
 RUN echo $host \
     && echo "121" \
-#    && chown -R magento:magento /var/www/html/magento/var/*
+    && chown -R magento:magento /var/www/html/magento/var/*
 
 COPY rootfs /
 ENV ALLOW_EMPTY_PASSWORD="no" \

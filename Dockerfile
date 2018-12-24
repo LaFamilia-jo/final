@@ -52,7 +52,7 @@ RUN sh /tmp/install-php7.2-mcrypt.sh \
 
 RUN echo $host \
     && echo "121" \
-    && chown -R magento:magento /var/www/html/magento/var
+    && chown -R magento:magento /var/www/html/magento/var/
 
 COPY rootfs /
 ENV ALLOW_EMPTY_PASSWORD="no" \

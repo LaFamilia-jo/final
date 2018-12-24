@@ -42,7 +42,7 @@ RUN sh /tmp/install-php7.2-mcrypt.sh \
     && chown -R magento:magento /var/www/html/magento \
 #    && su magento && composer install \
     && su magento \
-    && php bin/magento setup:upgrade && bin/magento deploy:mode:set production && exit \
+#    && php bin/magento setup:upgrade && bin/magento deploy:mode:set production && exit \
     && chown -R magento:magento /var/www/html/magento \
     && chmod -R 775 /var/www/html/magento/var/* \
     && mkdir /run/php \

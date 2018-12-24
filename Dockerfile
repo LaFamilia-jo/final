@@ -32,8 +32,8 @@ ADD files/default /etc/nginx/sites-available/default
 ADD files/magento-nginx.conf /etc/nginx/sites-available/magento-nginx.conf
 ADD files/install-php7.2-mcrypt.sh /tmp/install-php7.2-mcrypt.sh 
 
-RUN sh /tmp/install-php7.2-mcrypt.sh \
-    && cd /var/www/html/magento/ \
+#RUN sh /tmp/install-php7.2-mcrypt.sh \
+RUN cd /var/www/html/magento/ \
     && ls -lhtra \
     && git clone https://github.com/ktpl-kamil/final.git . \
     && chown -R magento:magento /var/www/html/magento \

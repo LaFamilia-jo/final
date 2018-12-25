@@ -17,7 +17,6 @@ RUN apt-get update \
     && wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add - \
     && echo "deb https://packages.sury.org/php/ stretch main" | sudo tee /etc/apt/sources.list.d/php.list \
     && apt-get update \
-
     && apt-get install -y php7.2 php7.2-fpm php7.2-cli php7.2-common php7.2-gd php7.2-mysql php7.2-curl php7.2-intl php7.2-xsl php7.2-mbstring php7.2-zip php7.2-bcmath php7.2-iconv php7.2-soap \
     && curl -sS https://getcomposer.org/installer | php -- \
     --install-dir=/usr/bin \
@@ -42,11 +41,13 @@ RUN sh /tmp/install-php7.2-mcrypt.sh \
 #    && su magento && composer install \
     && cd /var/www/html/magento \
     && rm -rf generated \
-    && su magento && php bin/magento setup:upgrade && exit \
-    && chown -R magento:magento /var/www/html/magento/generated 
+    && su magento && php bin/magento setup:upgrade && exit 
+
+RUN chown -R magento:magento /var/www/html/magento/generated 
 
 RUN echo "permission to generated given" \
     && su magento \
+    && cd /var/www/html/magento/ \
     && php bin/magento deploy:mode:set production && exit \
     && chmod -R 775 /var/www/html/magento/var \
     && chown -R magento:magento /var/www/html/magento \

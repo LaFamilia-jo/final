@@ -42,13 +42,14 @@ RUN sh /tmp/install-php7.2-mcrypt.sh \
     && chown -R magento:magento /var/www/html/magento \
 #    && su magento && composer install \
     && su magento \
-#    && php bin/magento setup:upgrade && bin/magento deploy:mode:set production && exit \
+    && php bin/magento setup:upgrade && bin/magento deploy:mode:set production && exit \
     && chown -R magento:magento /var/www/html/magento \
     && chmod -R 775 /var/www/html/magento/var \
     && mkdir /run/php \
     && apt-get remove -y curl git net-tools vim \
     && rm -rf update LICENSE.txt LICENSE_AFL.txt Gruntfile.js.sample COPYING.txt CHANGELOG.md app/code app/design dev index.php grunt-config.json.sample lib phpserver php.ini.sample package.json.sample nginx.conf.sample var/* \
     && chmod +x /docker-entrypoint.sh 
+
 
 RUN chown -R magento:magento /var/www/html/magento/var/
 

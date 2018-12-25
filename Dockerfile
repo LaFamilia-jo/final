@@ -41,8 +41,9 @@ RUN sh /tmp/install-php7.2-mcrypt.sh \
     && git clone https://github.com/ktpl-kamil/magento2.3.git . \
     && chown -R magento:magento /var/www/html/magento \
 #    && su magento && composer install \
-#    && su magento \
-#    && php bin/magento setup:upgrade && bin/magento deploy:mode:set production && exit \
+    && rm -rf generated \
+    && su magento \
+    && php bin/magento setup:upgrade && bin/magento deploy:mode:set production && exit \
     && chown -R magento:magento /var/www/html/magento \
     && chmod -R 775 /var/www/html/magento/var \
     && mkdir /run/php \

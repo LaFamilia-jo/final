@@ -42,8 +42,10 @@ RUN sh /tmp/install-php7.2-mcrypt.sh \
 #    && su magento && composer install \
     && rm -rf generated \
     && su magento \
-    && php bin/magento setup:upgrade #&& bin/magento deploy:mode:set production && exit \
+    && php bin/magento setup:upgrade && exit \
     && chown -R magento:magento /var/www/html/magento/generated \
+    && su magento \
+    && php bin/magento deploy:mode:set production && exit \
     && chmod -R 775 /var/www/html/magento/var \
     && mkdir /run/php \
     && apt-get remove -y curl git net-tools vim \

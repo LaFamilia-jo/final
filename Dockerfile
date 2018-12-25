@@ -41,14 +41,15 @@ RUN sh /tmp/install-php7.2-mcrypt.sh \
 #    && su magento && composer install \
     && cd /var/www/html/magento \
     && rm -rf generated \
-    && su magento && php bin/magento setup:upgrade && exit 
+#    && su magento && php bin/magento setup:upgrade && exit 
+    && su magento && php bin/magento setup:upgrade 
 
-RUN chown -R magento:magento /var/www/html/magento/generated 
+#RUN chown -R magento:magento /var/www/html/magento/generated 
 
 RUN echo "permission to generated given" \
-    && su magento \
+#    && su magento \
     && cd /var/www/html/magento/ \
-    && php bin/magento deploy:mode:set production && exit \
+#    && php bin/magento deploy:mode:set production && exit \
     && chmod -R 775 /var/www/html/magento/var \
     && chown -R magento:magento /var/www/html/magento \
     && mkdir /run/php \

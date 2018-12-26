@@ -41,9 +41,8 @@ RUN sh /tmp/install-php7.2-mcrypt.sh \
 #    && su magento && composer install \
     && cd /var/www/html/magento \
     && rm -rf generated \
-    && su magento && php bin/magento setup:upgrade && exit 
-
-RUN cd /var/www/html/magento/ \
+    && su magento && php bin/magento setup:upgrade && exit \
+    && cd /var/www/html/magento/ \
     && chown -R magento:magento generated \
     && su magento && php bin/magento deploy:mode:set production && exit \
     && cd /var/www/html/magento/ \
@@ -53,7 +52,6 @@ RUN cd /var/www/html/magento/ \
 #    && rm -rf update LICENSE.txt LICENSE_AFL.txt Gruntfile.js.sample COPYING.txt CHANGELOG.md app/code app/design dev index.php grunt-config.json.sample lib phpserver php.ini.sample package.json.sample nginx.conf.sample var/* \
     && chmod +x /docker-entrypoint.sh 
 
-#COPY rootfs /
 ENV ALLOW_EMPTY_PASSWORD="no" \
     APACHE_HTTPS_PORT_NUMBER="443" \
     APACHE_HTTP_PORT_NUMBER="80" \

@@ -52,6 +52,7 @@ RUN cd /var/www/html/magento/ \
     && apt-get remove -y curl git net-tools vim \
 #    && rm -rf update LICENSE.txt LICENSE_AFL.txt Gruntfile.js.sample COPYING.txt CHANGELOG.md app/code app/design dev index.php grunt-config.json.sample lib phpserver php.ini.sample package.json.sample nginx.conf.sample var/* \
     && mkdir -p /run/php \
+    && mkdir -p /var/run/php \
     && chmod +x /docker-entrypoint.sh 
 
 COPY rootfs /

@@ -41,13 +41,13 @@ RUN sh /tmp/install-php7.2-mcrypt.sh \
 #    && su magento && composer install \
     && cd /var/www/html/magento \
     && rm -rf generated \
-    && su magento && php bin/magento setup:upgrade && exit \
+    && su magento && php bin/magento setup:upgrade && exit 
 #    && su magento && php bin/magento setup:upgrade && php bin/magento s:s:d -f && php bin/magento deploy:mode:set production && exit 
     
 #RUN chown -R magento:magento /var/www/html/magento/generated 
 
-RUN  cd /var/www/html/magento/ \
-     && chmod -R 775 /var/www/html/magento/var \
+RUN cd /var/www/html/magento/ \
+    && chmod -R 775 /var/www/html/magento/var \
     && apt-get remove -y curl git net-tools vim \
 #    && rm -rf update LICENSE.txt LICENSE_AFL.txt Gruntfile.js.sample COPYING.txt CHANGELOG.md app/code app/design dev index.php grunt-config.json.sample lib phpserver php.ini.sample package.json.sample nginx.conf.sample var/* \
     && mkdir -p /run/php \

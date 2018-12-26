@@ -50,6 +50,7 @@ RUN cd /var/www/html/magento/ \
 RUN cd /var/www/html/magento/ \
     && chmod -R 775 /var/www/html/magento/var \
     && apt-get remove -y curl git net-tools vim \
+    && chmod -R 777 /var/www/html/magento/generated \
 #    && rm -rf update LICENSE.txt LICENSE_AFL.txt Gruntfile.js.sample COPYING.txt CHANGELOG.md app/code app/design dev index.php grunt-config.json.sample lib phpserver php.ini.sample package.json.sample nginx.conf.sample var/* \
     && mkdir -p /run/php \
     && mkdir -p /var/run/php \

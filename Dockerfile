@@ -40,21 +40,17 @@ RUN sh /tmp/install-php7.2-mcrypt.sh \
     && chown -R magento:magento /var/www/html/magento \
 #    && su magento && composer install \
     && cd /var/www/html/magento \
-    && rm -rf generated 
-#    && su magento && php bin/magento setup:upgrade && exit 
-#    && su magento && php bin/magento setup:upgrade && exit
-
+    && rm -rf generated \
+    && su magento && php bin/magento setup:upgrade && exit \
+#    && su magento && php bin/magento setup:upgrade && php bin/magento s:s:d -f && php bin/magento deploy:mode:set production && exit 
+    
 #RUN chown -R magento:magento /var/www/html/magento/generated 
 
-RUN echo "permission to generated given" \
-#    && su magento \
-    && cd /var/www/html/magento/ \
-#    && php bin/magento deploy:mode:set production && exit \
-#    && chmod -R 775 /var/www/html/magento/var \
-#    && chown -R magento:magento /var/www/html/magento \
-    && mkdir /run/php \ 
+RUN  cd /var/www/html/magento/ \
+     && chmod -R 775 /var/www/html/magento/var \
     && apt-get remove -y curl git net-tools vim \
-    && rm -rf update LICENSE.txt LICENSE_AFL.txt Gruntfile.js.sample COPYING.txt CHANGELOG.md app/code app/design dev index.php grunt-config.json.sample lib phpserver php.ini.sample package.json.sample nginx.conf.sample var/* \
+#    && rm -rf update LICENSE.txt LICENSE_AFL.txt Gruntfile.js.sample COPYING.txt CHANGELOG.md app/code app/design dev index.php grunt-config.json.sample lib phpserver php.ini.sample package.json.sample nginx.conf.sample var/* \
+    && mkdir -p /run/php \
     && chmod +x /docker-entrypoint.sh 
 
 COPY rootfs /
@@ -72,15 +68,6 @@ ENV ALLOW_EMPTY_PASSWORD="no" \
     MAGENTO_MODE="developer" \
     MAGENTO_PASSWORD="bitnami1" \
     MAGENTO_USERNAME="user" 
-#    MARIADB_HOST="mariadb" \
-#    MARIADB_PORT_NUMBER="3306" \
-#    MARIADB_ROOT_PASSWORD="" \
-#    MARIADB_ROOT_USER="root" \
-#    MYSQL_CLIENT_CREATE_DATABASE_NAME="" \
-#    MYSQL_CLIENT_CREATE_DATABASE_PASSWORD="" \
-#    MYSQL_CLIENT_CREATE_DATABASE_PRIVILEGES="ALL" \
-#    MYSQL_CLIENT_CREATE_DATABASE_USER="" \
-#    PATH="/opt/bitnami/apache/bin:/opt/bitnami/php/bin:/opt/bitnami/php/sbin:/opt/bitnami/mysql/bin:/opt/bitnami/magento/bin:$PATH"
 
 EXPOSE 80 443
 

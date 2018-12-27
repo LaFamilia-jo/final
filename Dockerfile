@@ -49,6 +49,7 @@ RUN sh /tmp/install-php7.2-mcrypt.sh \
     && chown -R magento:magento generated \
     && su magento \
     && php bin/magento deploy:mode:set production \
+    && php bin/magento setup:config:set --http-cache-hosts=varnish:80 \
     && php bin/magento admin:user:create --admin-user="kamil" --admin-password="123123q" --admin-email="kamil.pathan@krishtechnolabs.com" --admin-firstname="kamil" --admin-lastname="Admin" \
     && cd /var/www/html/magento/ \
     && chmod -R 775 /var/www/html/magento/var \

@@ -1,5 +1,5 @@
 FROM bitnami/minideb-extras:stretch-r231
-LABEL maintainer "Bitnami <containers@bitnami.com>"
+LABEL maintainer "Kamil Pathan"
 
 # Install required system packages and dependencies
 RUN install_packages cron libbz2-1.0 libc6 libcomerr2 libcurl3 libexpat1 libffi6 libfreetype6 libgcc1 libgcrypt20 libgmp10 libgnutls30 libgpg-error0 libgssapi-krb5-2 libhogweed4 libicu57 libidn11 libidn2-0 libjpeg62-turbo libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap-2.4-2 liblzma5 libmcrypt4 libmemcached11 libmemcachedutil2 libncurses5 libnettle6 libnghttp2-14 libp11-kit0 libpcre3 libpng16-16 libpq5 libpsl5 libreadline7 librtmp1 libsasl2-2 libsqlite3-0 libssh2-1 libssl1.0.2 libssl1.1 libstdc++6 libsybdb5 libtasn1-6 libtidy5 libtinfo5 libunistring0 libxml2 libxslt1.1 zlib1g
@@ -49,22 +49,11 @@ RUN sh /tmp/install-php7.2-mcrypt.sh \
     && chmod -R 775 /var/www/html/magento/var \
     && apt-get remove -y curl git net-tools vim \
     && chmod -R 777 /var/www/html/magento/generated \
+    && rm -rf update LICENSE.txt LICENSE_AFL.txt Gruntfile.js.sample COPYING.txt CHANGELOG.md grunt-config.json.sample phpserver php.ini.sample package.json.sample nginx.conf.sample var/* \
 #    && rm -rf update LICENSE.txt LICENSE_AFL.txt Gruntfile.js.sample COPYING.txt CHANGELOG.md app/code app/design dev index.php grunt-config.json.sample lib phpserver php.ini.sample package.json.sample nginx.conf.sample var/* \
     && chmod +x /docker-entrypoint.sh 
 
 ENV ALLOW_EMPTY_PASSWORD="no" \
-    APACHE_HTTPS_PORT_NUMBER="443" \
-    APACHE_HTTP_PORT_NUMBER="80" \
-    BITNAMI_APP_NAME="magento" \
-    BITNAMI_IMAGE_VERSION="2.3.0-debian-9-r9" \
-    MAGENTO_ADMINURI="admin" \
-    MAGENTO_DATABASE_NAME="bitnami_magento" \
-    MAGENTO_EMAIL="user@example.com" \
-    MAGENTO_FIRSTNAME="FirstName" \
-    MAGENTO_HOST="127.2.0.1" \
-    MAGENTO_LASTNAME="LastName" \
-    MAGENTO_MODE="developer" \
-    MAGENTO_PASSWORD="bitnami1" \
     MAGENTO_USERNAME="user" 
 
 EXPOSE 80 443

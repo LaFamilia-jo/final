@@ -1,13 +1,13 @@
 #!/bin/bash
 #set -e
 # Recommend syntax for setting an infinite while loop
-#su magento
+su magento
 
-#cd /var/www/html/magento/
+cd /var/www/html/magento/
 
-#php bin/magento setup:config:set --http-cache-hosts=varnish:80
+php bin/magento setup:config:set --http-cache-hosts=varnish:80
 
-#exit
+exit
 
 service php7.2-fpm start
 service nginx start

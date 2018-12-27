@@ -47,10 +47,12 @@ RUN sh /tmp/install-php7.2-mcrypt.sh \
     && chown -R magento:magento generated \
     && su magento \
     && php bin/magento deploy:mode:set production \
+    && php bin/magento admin:user:create --admin-user="kamil" --admin-password="123123q" --admin-email="kamil.pathan@krishtechnolabs.com" --admin-firstname="kamil" --admin-lastname="Admin" \
     && cd /var/www/html/magento/ \
     && chmod -R 775 /var/www/html/magento/var \
     && apt-get remove -y curl git net-tools vim \
     && chmod -R 777 /var/www/html/magento/generated \
+    && chown -R magento:magento /var/www/html/magento/ \
     && rm -rf update LICENSE.txt LICENSE_AFL.txt Gruntfile.js.sample COPYING.txt CHANGELOG.md grunt-config.json.sample phpserver php.ini.sample package.json.sample nginx.conf.sample var/* \
 #    && rm -rf update LICENSE.txt LICENSE_AFL.txt Gruntfile.js.sample COPYING.txt CHANGELOG.md app/code app/design dev index.php grunt-config.json.sample lib phpserver php.ini.sample package.json.sample nginx.conf.sample var/* \
     && chmod +x /docker-entrypoint.sh 

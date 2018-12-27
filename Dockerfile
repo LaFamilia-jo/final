@@ -42,7 +42,9 @@ RUN sh /tmp/install-php7.2-mcrypt.sh \
 #    && su magento && composer install \
     && cd /var/www/html/magento \
     && rm -rf generated \
-    && su magento && php bin/magento setup:upgrade \
+    && su magento \
+    && php bin/magento sampledata:deploy \
+    && php bin/magento setup:upgrade \
     && cd /var/www/html/magento/ \
     && chown -R magento:magento generated \
     && su magento \

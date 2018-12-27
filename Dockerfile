@@ -32,6 +32,7 @@ ADD files/php-fpm.ini /etc/php/7.2/fpm/php.ini
 ADD files/default /etc/nginx/sites-available/default
 ADD files/magento-nginx.conf /etc/nginx/sites-available/magento-nginx.conf
 ADD files/install-php7.2-mcrypt.sh /tmp/install-php7.2-mcrypt.sh 
+#ADD files/varnish.vcl /etc/varnish/default.vcl
 
 RUN sh /tmp/install-php7.2-mcrypt.sh \
     && cd /var/www/html/magento/ \

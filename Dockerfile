@@ -1,11 +1,14 @@
 FROM kamil71/magento2.3:v2.0
 LABEL maintainer "Kamil Khan"
 
+
 # Install required system packages and dependencies
+RUN mkdir -p /opt/bitnami/magento/htdocs \
+    && find /opt/bitnami/magento/htdocs -type d -print0 | xargs -0 chmod 775 && find /opt/bitnami/magento/htdocs -type f -print0 | xargs -0 chmod 664 && chown -R bitnami:daemon /opt/bitnami/magento/htdocs
+
 USER bitnami:daemon
 
-RUN mkdir -p /opt/bitnami/magento/htdocs \
-    && git clone https://github.com/ktpl-kamil/magento2_3.git /opt/bitnami/magento/htdocs \
+RUN git clone https://github.com/ktpl-kamil/magento2_3.git /opt/bitnami/magento/htdocs \
     && php bin/magento s:s:d 
 
 ENV ALLOW_EMPTY_PASSWORD="no" \

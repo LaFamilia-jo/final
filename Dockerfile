@@ -16,7 +16,7 @@ RUN mkdir -p /opt/bitnami/magento/htdocs \
     && cd /opt/bitnami/magento/htdocs \
     && git clone https://github.com/ktpl-kamil/magento2_3.git . 
 
-RUN COPY rootfs/env.php /opt/bitnami/magento/htdocs/app/etc/env.php
+COPY rootfs/env.php /opt/bitnami/magento/htdocs/app/etc/env.php
 
 RUN find /opt/bitnami/magento/htdocs -type d -print0 | xargs -0 chmod 775 && find /opt/bitnami/magento/htdocs -type f -print0 | xargs -0 chmod 664 && chown -R bitnami:daemon /opt/bitnami/magento/htdocs
 

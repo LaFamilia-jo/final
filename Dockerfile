@@ -20,6 +20,10 @@ RUN COPY rootfs/env.php /opt/bitnami/magento/htdocs/app/etc/env.php
 
 RUN find /opt/bitnami/magento/htdocs -type d -print0 | xargs -0 chmod 775 && find /opt/bitnami/magento/htdocs -type f -print0 | xargs -0 chmod 664 && chown -R bitnami:daemon /opt/bitnami/magento/htdocs
 
+USER bitnami:daemon
+RUN cd /opt/bitnami/magento/htdocs \
+    && php bin/magento s:s:d 
+
 COPY rootfs /
 ENV ALLOW_EMPTY_PASSWORD="no" \
     APACHE_HTTPS_PORT_NUMBER="443" \

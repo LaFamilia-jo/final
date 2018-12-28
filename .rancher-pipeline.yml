@@ -1,0 +1,13 @@
+stages:
+- name: Build and Publish
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: lafamiliajo/${CICD_GIT_REPO_NAME}:${CICD_GIT_TAG}
+      pushRemote: true
+      registry: index.docker.io
+- name: Deploy
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml

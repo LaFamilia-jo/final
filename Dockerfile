@@ -3,11 +3,6 @@ LABEL maintainer "Kamil Khan"
 
 
 # Install required system packages and dependencies
-RUN mkdir -p /opt/bitnami/magento/htdocs \
-    && find /opt/bitnami/magento/htdocs -type d -print0 | xargs -0 chmod 775 && find /opt/bitnami/magento/htdocs -type f -print0 | xargs -0 chmod 664 /opt/bitnami/magento/htdocs && chown -R bitnami:daemon /opt/bitnami/magento/htdocs
-
-USER bitnami:daemon
-
 RUN git clone https://github.com/ktpl-kamil/magento2_3.git /opt/bitnami/magento/htdocs \
     && php bin/magento s:s:d 
 

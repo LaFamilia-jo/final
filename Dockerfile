@@ -1,7 +1,6 @@
 FROM kamil71/magento2.3:v2.0
 LABEL maintainer "Kamil Khan"
 
-USER bitnami:daemon
 # Install required system packages and dependencies
 RUN git clone https://github.com/ktpl-kamil/magento2_3.git /opt/bitnami/magento/htdocs \
     && cd /opt/bitnami/magento/htdocs \

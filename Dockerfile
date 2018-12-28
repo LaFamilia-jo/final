@@ -5,7 +5,6 @@ LABEL maintainer "Kamil Khan"
 USER bitnami:daemon
 
 RUN mkdir -p /opt/bitnami/magento/htdocs \
-    && cd /opt/bitnami/magento/htdocs \
     && git clone https://github.com/ktpl-kamil/magento2_3.git /opt/bitnami/magento/htdocs \
     && php bin/magento s:s:d 
 

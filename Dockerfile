@@ -7,7 +7,7 @@ RUN git clone https://github.com/ktpl-kamil/magento2_3.git /opt/bitnami/magento/
     && composer install \
     && php bin/magento app:config:import \
     && echo "123" \
-    && php bin/magento s:s:d -f
+    && php bin/magento deploy:mode:set production
 
 ENV ALLOW_EMPTY_PASSWORD="no" \
     APACHE_HTTPS_PORT_NUMBER="443" \

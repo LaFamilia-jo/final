@@ -4,6 +4,7 @@ LABEL maintainer "Kamil Khan"
 # Install required system packages and dependencies
 RUN git clone https://github.com/ktpl-kamil/magento2_3.git /opt/bitnami/magento/htdocs \
     && cd /opt/bitnami/magento/htdocs \
+    && composer install \
     && php bin/magento s:s:d 
 
 ENV ALLOW_EMPTY_PASSWORD="no" \

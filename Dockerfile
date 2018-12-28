@@ -5,7 +5,7 @@ LABEL maintainer "Kamil Khan"
 RUN git clone https://github.com/ktpl-kamil/magento2_3.git /opt/bitnami/magento/htdocs \
     && cd /opt/bitnami/magento/htdocs \
     && composer install \
-    && php bin/magento s:s:d 
+    && php bin/magento s:s:d -f
 
 ENV ALLOW_EMPTY_PASSWORD="no" \
     APACHE_HTTPS_PORT_NUMBER="443" \

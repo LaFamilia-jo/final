@@ -1,4 +1,4 @@
-FROM kamil71/magento2.3:v2.0
+FROM kamil71/magento2.3:v2.2
 LABEL maintainer "Kamil Khan"
 
 # Install required system packages and dependencies

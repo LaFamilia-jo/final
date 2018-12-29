@@ -7,7 +7,7 @@ RUN git clone https://github.com/ktpl-kamil/magento2_3.git /opt/bitnami/magento/
     && cd /opt/bitnami/magento/htdocs \
     && composer install \
     && composer update \
-    && echo "12345" \
+    && echo "1234" \
     && su bitnami && php bin/magento app:config:dump \
     && su bitnami && php bin/magento s:s:d -f
 

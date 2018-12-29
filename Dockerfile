@@ -3,6 +3,7 @@ LABEL maintainer "Kamil Khan"
 
 # Install required system packages and dependencies
 COPY rootfs/php.ini /opt/bitnami/php/etc/php.ini
+COPY rootfs/bitnami.conf /opt/bitnami/apache/conf/bitnami/bitnami.conf
 
 RUN git clone https://github.com/ktpl-kamil/magento2_3.git /opt/bitnami/magento/htdocs \
     && cd /opt/bitnami/magento/htdocs \

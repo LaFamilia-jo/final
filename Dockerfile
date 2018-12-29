@@ -10,9 +10,9 @@ RUN git clone https://github.com/ktpl-kamil/magento2_3.git /opt/bitnami/magento/
     && composer install \
     && composer update \
     && echo "12345" \
-    && php bin/magento setup:upgrade && php bin/magento s:s:d -f
+    && php bin/magento deploy:mode:set production
 
-RUN find /opt/bitnami/magento/htdocs -type d -print0 | xargs -0 chmod 775 && find /opt/bitnami/magento/htdocs -type f -print0 | xargs -0 chmod 664 /opt/bitnami/magento/htdocs && chown -R bitnami:daemon /opt/bitnami/magento/htdocs
+RUN find /opt/bitnami/magento/htdocs -type d -print0 | xargs -0 chmod 775 && find /opt/bitnami/magento/htdocs -type f -print0 | xargs -0 chmod 755 /opt/bitnami/magento/htdocs && chown -R bitnami:daemon /opt/bitnami/magento/htdocs
 
 ENV ALLOW_EMPTY_PASSWORD="no" \
     APACHE_HTTPS_PORT_NUMBER="443" \

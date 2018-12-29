@@ -8,7 +8,7 @@ RUN git clone https://github.com/ktpl-kamil/magento2_3.git /opt/bitnami/magento/
     && cd /opt/bitnami/magento/htdocs \
     && composer install \
     && composer update \
-    && echo "123" \
+    && echo "1234" \
     && su bitnami && php bin/magento deploy:mode:set production
 
 ENV ALLOW_EMPTY_PASSWORD="no" \

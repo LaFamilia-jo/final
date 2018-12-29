@@ -5,8 +5,8 @@ LABEL maintainer "Kamil Khan"
 
 RUN git clone https://github.com/ktpl-kamil/magento2_3.git /opt/bitnami/magento/htdocs \
     && cd /opt/bitnami/magento/htdocs \
-    && composer install \
-    && composer update \
+#    && composer install \
+#    && composer update \
     && echo "12345" \
     && su bitnami && php bin/magento s:s:d -f
 

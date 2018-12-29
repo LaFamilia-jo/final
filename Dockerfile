@@ -2,14 +2,15 @@ FROM kamil71/magento2.3:v2.0
 LABEL maintainer "Kamil Khan"
 
 # Install required system packages and dependencies
-USER bitnami:daemon
 
 RUN git clone https://github.com/ktpl-kamil/magento2_3.git /opt/bitnami/magento/htdocs \
     && cd /opt/bitnami/magento/htdocs \
     && composer install \
     && composer update \
     && echo "1234" \
-    && su bitnami && php bin/magento deploy:mode:set production
+    && su bitnami && php bin/magento deploy:mode:set production 
+
+RUN find /opt/bitnami/magento/htdocs -type d -print0 | xargs -0 chmod 775 && find /opt/bitnami/magento/htdocs -type f -print0 | xargs -0 chmod 664 /opt/bitnami/magento/htdocs && chown -R bitnami:daemon /opt/bitnami/magento/htdocs
 
 ENV ALLOW_EMPTY_PASSWORD="no" \
     APACHE_HTTPS_PORT_NUMBER="443" \

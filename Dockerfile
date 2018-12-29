@@ -1,14 +1,15 @@
-FROM kamil71/magento2.3:v2.2
+FROM kamil71/magento2.3:v2.3
 LABEL maintainer "Kamil Khan"
 
 # Install required system packages and dependencies
+COPY rootfs/php.ini /opt/bitnami/php/etc/php.ini
 
-RUN git clone https://github.com/ktpl-kamil/magento2_3.git /opt/bitnami/magento/htdocs \
-    && cd /opt/bitnami/magento/htdocs \
-    && composer install \
-    && composer update \
-    && echo "12345" \
-    && php bin/magento setup:upgrade && php bin/magento s:s:d -f
+#RUN git clone https://github.com/ktpl-kamil/magento2_3.git /opt/bitnami/magento/htdocs \
+#    && cd /opt/bitnami/magento/htdocs \
+#    && composer install \
+##    && composer update \
+#    && echo "12345" \
+#    && php bin/magento setup:upgrade && php bin/magento s:s:d -f
 
 RUN find /opt/bitnami/magento/htdocs -type d -print0 | xargs -0 chmod 775 && find /opt/bitnami/magento/htdocs -type f -print0 | xargs -0 chmod 664 /opt/bitnami/magento/htdocs && chown -R bitnami:daemon /opt/bitnami/magento/htdocs
 

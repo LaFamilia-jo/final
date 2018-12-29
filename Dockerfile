@@ -2,7 +2,7 @@ FROM kamil71/magento2.3:v2.3
 LABEL maintainer "Kamil Khan"
 
 # Install required system packages and dependencies
-COPY rootfs/php.ini /opt/bitnami/php/etc/php.ini
+COPY php.ini /opt/bitnami/php/etc/php.ini
 
 #RUN git clone https://github.com/ktpl-kamil/magento2_3.git /opt/bitnami/magento/htdocs \
 #    && cd /opt/bitnami/magento/htdocs \
